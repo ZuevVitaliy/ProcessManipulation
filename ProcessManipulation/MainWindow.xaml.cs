@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,14 @@ namespace ProcessManipulation
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<string> _availableAssemblies;
+        private ObservableCollection<string> _runningProcesses;
+
         public MainWindow()
         {
             InitializeComponent();
+            _availableAssembliesList.ItemsSource = _availableAssemblies = new ObservableCollection<string>();
+            _runningProcessesList.ItemsSource = _runningProcesses = new ObservableCollection<string>();
         }
 
         private void Start(object sender, RoutedEventArgs e)
