@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProcessManipulation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Управление дочерними процессами" MinHeight="300" MinWidth="600">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Запущенные процессы" FontSize="20"/>
+            <ListBox x:Name="_runningProcessesList" Grid.Row="1"/>
+        </Grid>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+            <Button Width="75" Height="25" Margin="0, 5" Click="Start">Start</Button>
+            <Button Width="75" Height="25" Margin="0, 5" Click="Stop">Stop</Button>
+            <Button Width="75" Height="25" Margin="0, 5" Click="CloseWindow">Close Window</Button>
+            <Button Width="75" Height="25" Margin="0, 5" Click="Refresh">Refresh</Button>
+            <Button Width="75" Height="25" Margin="0, 5" Click="RunCalc">Run Calc</Button>
+        </StackPanel>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Доступные сборки" FontSize="20"/>
+            <ListBox x:Name="_availableAssembliesList" Grid.Row="1"/>
+        </Grid>
     </Grid>
 </Window>

@@ -24,5 +24,30 @@ namespace ProcessManipulation
         {
             InitializeComponent();
         }
+
+        private void Start(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Stop(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Refresh(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RunCalc(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
